@@ -2,7 +2,7 @@
 
 **LiXiT** is a static site created with AstroJS, AOS, and Tailwind, featuring a visually appealing color theme. It can be used as a theme/template for your projects. The project is currently in production and ready to be used.
 
-[![Build Astro Site](https://github.com/ArnavK-09/LiXiT/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/ArnavK-09/LiXiT/actions/workflows/build.yml)
+[![Build Astro Site](https://github.com/ArnavK-09/LiXiT/actions/workflows/build.yml/badge.svg)](https://github.com/ArnavK-09/LiXiT/actions/workflows/build.yml)
 
 ## ✨ Features
 
