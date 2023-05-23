@@ -2,7 +2,7 @@
   class="flex z-40 fixed top-0 bg-white/90 w-full shadow-sm align-middle overflow-hidden p-3 h-12 md:h-14 backdrop-blur-sm"
 >
   <div class="text-left">
-    <button type="button" @click="open = ! open">
+    <button aria-label="open_navigation" type="button" @click="open = ! open">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -17,11 +17,12 @@
       </svg></button
     >
   </div>
-  <a href="/" class="text-center w-full flex items-center justify-center mx-auto">
-    <img src="/logo.svg" class="h-6 w-6 scale-150" />
-    <span class="mx-2 text-lg" > | </span>
-    <h1 class="text-lg font-bold tracking-wide">
-      Team Lixit
-    </h1>
+  <a
+    href="/"
+    class="text-center w-full flex items-center justify-center mx-auto"
+  >
+    <img alt="Logo" src="/logo.svg" class="h-6 w-6 scale-150" />
+    <span class="mx-2 text-lg"> |</span>
+    <h1 class="text-lg font-bold tracking-wide">Team Lixit</h1>
   </a>
 </nav>
