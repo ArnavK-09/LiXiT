@@ -1,0 +1,63 @@
+---
+// Components
+import PartnerCard from "@/components/cards/Partner.astro";
+
+// Partners
+const partners: Array<{
+  name: string;
+  description: string;
+  img?: string;
+  yt: string;
+  bg: string;
+}> = [
+  {
+    name: "Bebu",
+    img: "https://yt3.googleusercontent.com/cMMw-RBHelmn4YzZ3RhJHe7aQyMA1iaBHMIEjpMOlmbMNjEx0seaPX6AcX-jSoNWFKcfiO4kLQ=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    yt: "Bebu",
+    bg: "bg-amber-300",
+    description: `Hey everyone it’s Bebu, and Welcome back to another minecraft legends video! I try to keep these vids as clean and family friendly as possible! Today I'm playing THIS NEW MINECRAFT GAME HAS AN AMAZING ENDING!! Hope you enjoy!
+  `,
+  },
+  {
+    name: "Mr. Miko",
+    img: "https://yt3.googleusercontent.com/L0yBVFhoAWW49MLBvrhbjKZz2dt2HBOkOy8jJULWw1IrybsISOR41G-jtyDsK4l5U7ro-5UAAw=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    yt: "mrmiko2.0",
+    bg: "bg-indigo-500",
+    description: `Hey everyone it’s Bebu, and Welcome back to another minecraft legends video! I try to keep these vids as clean and family friendly as possible! Today I'm playing THIS NEW MINECRAFT GAME HAS AN AMAZING ENDING!! Hope you enjoy!
+  `,
+  },
+  {
+    name: "Ayush More",
+    img: "https://yt3.googleusercontent.com/ZwyrlVc7Vdex7eHv1BjZGbY2YakNen76fCCDF2lKCcB-PxKZSNNF0_tOKkaqCzAgCeoqqfWN8uw=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    yt: "AyushMore",
+    bg: "bg-orange-300",
+    description: `Ayush More is an Entertainer who loves Games and looks around the world & has very interesting life stories and thoughts to share. Here I upload videos of whatever I feel to share like GAMING, ANIMATION, STORYTIME, etc.`,
+  },
+  {
+    name: "ProBoiz 95",
+    img: "https://yt3.googleusercontent.com/UU4fk76peeO_TiSK4mbOBZroQV4XkGXfTlVql4BzjOYXSFPvlRXzSS4A6341xn3rcFntVFBcs-I=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    yt: "ProBoiz95",
+    bg: "bg-cyan-200",
+    description: `Hey everyone it’s Bebu, and Welcome back to another minecraft legends video! I try to keep these vids as clean and family friendly as possible! Today I'm playing THIS NEW MINECRAFT GAME HAS AN AMAZING ENDING!! Hope you enjoy!
+  `,
+  },
+];
+---
+
+<section class="py-11 bg-[#0f110e]" id="partners">
+  <div class="text-center py-5">
+    <h2 class="text-3xl font-bold text-white">Our Partners...</h2>
+    <p class="text-gray-400">Who are enjoying partnerships with us</p>
+  </div>
+  <div class="grid my-5 grid-cols-1 md:grid-cols-2 gap-6 px-6">
+    {partners.map((partner) => <PartnerCard {...partner} />)}
+  </div>
+  <div class="text-center py-5 mt-6">
+    <h2 class="text-3xl font-bold text-white">...More, See the difference</h2>
+    <p class="text-gray-400">Who are enjoying partnerships with us</p>
+    <div class="text-center px-10 py-8 mt-5 block mx-auto">
+      <h3 class="text-yellow-400 text-5xl font-bold">10+</h3>
+      <p class="text-white/60 text-md font-medium">Happy Youtubers with us</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+// Footer Links
+const links: Array<{
+  label: string;
+  url: string;
+  target?: string;
+}> = [
+  {
+    label: "Home",
+    url: "/",
+  },
+  {
+    label: "Team",
+    url: "/team",
+  },
+  {
+    label: "Contact",
+    url: "/contact",
+  },
+  {
+    label: "FAQs",
+    url: "/faq",
+  },
+];
+---
+
+<section id="footer" class="pt-11 pb-9 px-8">
+  <div class="text-left">
+    <h2 class="tracking-wider text-3xl font-extrabold">Lixit Pvt.</h2>
+    <p class="text-black/60 my-3">
+      Reach your youtube channel to new heights...
+    </p>
+    <h2 class="tracking-wider text-2xl font-extrabold">contact@lixit.team</h2>
+    <p class="text-black/60 my-3">24/7 | GMT+5:30</p>
+    <h2 class="tracking-wider text-2xl font-extrabold">+91 72270-99684</h2>
+    <p class="text-black/60 my-3">Call or WhatsApp</p>
+
+    <hr />
+
+    <div class="flex text-center flex-wrap my-4 gap-4 text-center">
+      {
+        links.map((link) => (
+          <a
+            class="hover:underline text-black/80"
+            target={link.target ?? "_self"}
+            href={link.url}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="text-gray-400/90 text-center my-7">
+      Copyright ©2023 Lixit. <br /> All rights reserved.
+    </p>
+  </div>
+</section>

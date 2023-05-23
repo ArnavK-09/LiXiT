@@ -1,0 +1,51 @@
+---
+// Layout
+import Layout from "@/layouts/Layout.astro";
+
+// Faqs 
+const faqs: Array<{q: string, ans: string}> = [
+{q: "Who is Krishlix?", ans: "Dumb"},
+{q: "Who is Dope?", ans: "Godfather"},
+{q: "Who is Krishlix?", ans: "Dumb"},
+{q: "Who is Dope?", ans: "Godfather"},
+{q: "Who is Krishlix?", ans: "Dumb"},
+{q: "Who is Dope?", ans: "Godfather"},
+]
+---
+
+<Layout title="Frequently Asked Questions">
+  <section
+    id="faqs"
+    class="py-12 bg-gradient-to-b from-transparent via-amber-200/40"
+  >
+<div class="text-center py-5">
+    <h2 class="text-4xl my-4 tracking-wider font-bold">FAQs...</h2>
+    <p class="text-black/50">Frequently Asked Questions By Customers</p></div>
+    <ul class="m-8">
+      {faqs.map((faq) => (
+     <li data-aos="fade-up"
+        class="relative my-6 rounded-md shadow-md py-3 px-1 bg-white"
+        x-data="{selected:false}"
+      >
+        <button
+          type="button"
+          class="w-full px-5 py-3 font-extrabold" 
+          @click="selected = !selected"
+        >
+          <div class="flex items-center justify-between">
+            <p class="text-left overflow-x-scroll">Q: {faq.q}</p>
+            <span class="text-right duration-200" :class="selected ? 'rotate-180' : ''">↓</span>
+          </div>
+        </button>
+        <div class="relative overflow-hidden" x-show="selected" x-transition>
+          <div class="px-5 py-2">
+            <p class="text-black/90">
+              <span class="text-sm text-black/60">Answer:</span><br />{faq.ans}
+            </p>
+          </div>
+        </div>
+      </li>
+      ))}
+    </ul>
+  </section>
+</Layout>

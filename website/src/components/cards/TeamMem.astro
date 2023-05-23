@@ -1,0 +1,43 @@
+---
+// Props
+export interface Props {
+  name: string;
+  pos: string;
+  content?: string;
+  avatar?: string;
+  id: number | string;
+}
+const { name, pos, avatar = "/favicon.svg", id, content = "Hii" } = Astro.props;
+---
+
+<figure data-aos="flip-down" class="shadow-2xl bg-white rounded-xl py-5 px-4">
+  <img
+    class="w-24 h-24 border border-indigo-500 rounded-full mx-auto"
+    src={avatar}
+    alt={name + " Pic"}
+  />
+  <div class="pt-6 text-center">
+    <blockquote>
+      <p class="text-md md:text-lg font-medium">"{content}"</p>
+    </blockquote>
+    <figcaption class="font-medium">
+      <div class="mt-4 text-indigo-700 font-extrabold text-lg tracking-wider">
+        {name}
+      </div>
+      <div class="text-slate-500 my-2">{pos}</div>
+      <div class="my-3 w-full">
+        <div class="block mx-auto">
+          <a
+            href={`https://discord.com/users/${id}`}
+            target="_blank"
+            class="py-2 px-4 rounded-2xl bg-transparent border-2 border-indigo-600 text-indigo-600 hover:text-white hover:bg-indigo-600"
+          >
+            <span class="text-center font-medium tracking-wide">
+              Contact On Discord
+            </span>
+          </a>
+        </div>
+      </div>
+    </figcaption>
+  </div>
+</figure>

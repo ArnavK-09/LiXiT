@@ -1,0 +1,64 @@
+---
+// Components
+import ServiceCard from "@/components/cards/Service.astro";
+
+// Services
+const services: Array<{
+  name: string;
+  description: string;
+  icon: string;
+}> = [
+  {
+    name: "Brand Deals & Sponserships",
+    description:
+      "We Provide Sponsors And Brand Deals To Our Creator Clients! With The Best Experience",
+    icon: `<svg class="bg-blue-500 rounded-full p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+</svg>
+`,
+  },
+  {
+    name: "Youtube Management",
+    description:
+      "We Manage The YouTube Channel of the Creators With The Best Experience. We Help Them in YT Studios, Thumbnails, VFX Etc With Cyber security",
+    icon: `<svg class="bg-red-600 rounded-full p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+  <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+</svg>
+`,
+  },
+  {
+    name: "Discord Server Management",
+    description:
+      "We Provide Most Skilled Managers In Your Discord Server Which Are Available 24/7",
+    icon: `<svg class="bg-indigo-500 rounded-full p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+</svg>
+`,
+  },
+  {
+    name: "GFX",
+    description:
+      "We Have Highly Experienced GFX Artists In Our Team Which We Provide To The Clients In The Best Ways Possible!",
+    icon: `<svg class="bg-cyan-600 rounded-full p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+</svg>
+`,
+  },
+];
+---
+
+<section
+  id="services"
+  class="px-3 md:px-8 md:my-20 py-10 bg-gradient-to-b from-orange-100/10 via-orange-200/30"
+>
+  <h2 class="text-3xl text-center font-semibold my-2">
+    Our services can make your channel more sophisticated
+  </h2>
+  <p class="px-3 text-black/70 font-medium">
+    Our team has a successful track record of helping youtubers manage
+    efficiently based on high-performing strategies
+  </p>
+  <div class="my-4 gap-6 grid grid-cols-1 md:grid-cols-2 md:px-10">
+    {services.map((service) => <ServiceCard {...service} />)}
+  </div>
+</section>

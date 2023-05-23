@@ -1,0 +1,31 @@
+---
+// Components
+import ReviewCard from "@/components/cards/Review.astro";
+
+// Reviews
+const reviews: Array<{
+  title: string;
+  comment: string;
+  author: string;
+}> = [
+  {
+    title: "So Good!",
+    author: "Babu, Youtuber",
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque ecusandae dolorum porro, quasi sunt necessitatibus dolorem ab laudantium vel.",
+  },
+];
+---
+
+<section
+  class="text-center py-11 bg-gradient-to-t from-violet-200"
+  id="reviews"
+>
+  <div>
+    <h2 class="text-3xl px-4 font-semibold">What our awesome customers say</h2>
+    <p class="my-4 text-black/80">Our reviews are fire as always...</p>
+  </div>
+  <div class="px-8 md:px-11 grid grid-cols-1 md:grid-cols-2 gap-4">
+    {reviews.map((review) => <ReviewCard {...review} />)}
+  </div>
+</section>

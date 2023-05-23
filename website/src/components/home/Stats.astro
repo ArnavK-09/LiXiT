@@ -1,0 +1,32 @@
+---
+// Stats
+const statsList = [
+  {
+    text: `Partners`,
+    figure: 10,
+  },
+  {
+    text: `Experience`,
+    figure: `4Yrs`,
+  },
+  {
+    text: `Active Daily`,
+    figure: `24hr`,
+  },
+  {
+    text: `Reviews`,
+    figure: `35`,
+  },
+];
+---
+
+<section id="stats" class="w-full px-9 gap-7 grid grid-cols-1 md:grid-cols-2">
+  {
+    statsList.map((stat) => (
+      <div class="py-5 text-center rounded-2xl">
+        <h4 class="font-extrabold text-4xl">{stat.figure}+</h4>
+        <p class="text-black/60 font-bold text-lg">{stat.text}</p>
+      </div>
+    ))
+  }
+</section>

@@ -1,0 +1,46 @@
+<section x-show="open" class="z-20 h-screen w-screen bg-black/60 fixed top-0">
+</section>
+<aside
+  x-show="open"
+  x-transition:enter="transition duration-300"
+  x-transition:enter-start="transform -translate-x-full"
+  x-transition:enter-end="transform translate-x-0"
+  x-transition:leave="transition duration-100"
+  x-transition:leave-start="transform"
+  x-transition:leave-end="transform -translate-x-full"
+  class="z-50 px-7 p-5 w-[90%] transform top-0 left-0 md:w-5/12 bg-white fixed h-full overflow-auto"
+>
+  <button
+    @click="open = ! open"
+    type="button"
+    class="absolute top-0 left-5 mt-4"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <ul @click="open = ! open" class="divide-y font-normal tracking-widest mt-10">
+    <li><a href="/" class="my-4 inline-block">Home</a></li>
+    <li><a href="/team" class="my-4 inline-block">Our Team</a></li>
+    <li><a href="/faq" class="my-4 inline-block">FAQs</a></li>
+    <li><a href="/contact" class="my-4 inline-block">Contact Us</a></li>
+    <li><a href="/#partners" class="my-4 inline-block">Our Partners</a></li>
+    <li><a href="/discord" class="my-4 inline-block">Discord Server</a></li>
+    <li>
+      <a
+        href="/discord"
+        target="_blank"
+        class="my-8 rounded-lg w-full text-center font-semibold inline-block bg-black hover:bg-transparent px-3 py-2 rounded text-white hover:text-black border-2 border-black"
+        >Get Quote</a
+      >
+    </li>
+  </ul>
+</aside>
