@@ -25,7 +25,6 @@ jobs:
         uses: withastro/action@v0
         with:
             path: website
-            node-version: 18 
             package-manager: npm 
 
   deploy:
