@@ -6,6 +6,6 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://lixit.onrender.com/",
+  site: "https://teamlixit.space/",
   integrations: [tailwind(), sitemap(), alpinejs()],
 });
