@@ -1,0 +1,28 @@
+---
+// Layout
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout title="Page Not Found">
+  <section
+    id="404"
+    class="py-12 justify-center items-center flex h-screen bg-gradient-to-b to-red-600/70 from-red-700/10"
+  >
+    <div>
+      <div class="text-center my-auto">
+        <h1 class="font-extrabold tracking-wide my-3 text-6xl">
+          Page Not Found :(
+        </h1>
+        <p class="text-lg my-2 text-black/70 tracking-wide font-semibold">
+          Please double check the url
+        </p>
+      </div>
+      <div class="block text-center mx-auto my-7">
+        <a href="/">
+          <button class="font-bold text-xl py-3 px-6 rounded-2xl border-2 border-black hover:bg-transparent bg-black hover:text-black text-white">
+            Back To Home!
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
