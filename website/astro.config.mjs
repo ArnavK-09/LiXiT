@@ -6,7 +6,6 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://arnavk-09.github.io/",
-  base: "/LiXiT",
+  site: "https://arnavk-09.github.io/LiXiT/",
   integrations: [tailwind(), sitemap(), alpinejs()],
 });
