@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 # extras 
 package-lock.json
+.replit
+replit.nix
